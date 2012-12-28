@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html ng-app="home">
+<head>
+  <title>Mike Falkowski</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.3/angular.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.3/angular-resource.min.js"></script>
+</head>
+<body>
+	<div id="linearBg2"><%= image_tag "falko_logo.png" %></div>
+	<div class="container-fluid">
+		<div class="row-fluid">
+			<div class="span2">
+				<ul class="nav nav-tabs nav-stacked">
+					<li><a href="#">Home</a></li>
+					<li><a href="#/about">About Me</a></li>
+					<li><a href="#/work">Work</a></li>
+					<li><a href="#">Blog</a></li>
+				</ul>
+			</div>
+			<div class="span8" ng-view>
+				<%= yield %>
+			</div>
+		</div>
+	</div>
+	<%= javascript_include_tag "services" %>
+	<%= javascript_include_tag "controllers" %>
+</body>
+</html>

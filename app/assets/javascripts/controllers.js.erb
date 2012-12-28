@@ -1,0 +1,16 @@
+
+angular.module("home", [], function($routeProvider) {
+	$routeProvider.when('/', 
+		{templateUrl: '/main', controller: homeCtrl});
+});
+
+
+function homeCtrl($scope, $http) {
+	$http({method: 'GET', url: '/post'}).
+		success(function(data, status, headers, config) {
+			$scope.posts = data;
+		}).
+		error(function(data, status, headers, config) {
+			$scope.posts = status;
+		});
+}

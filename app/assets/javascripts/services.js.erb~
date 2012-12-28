@@ -1,0 +1,4 @@
+angular.service('Posts', function($resource) {
+ return $resource('post/', {},
+                  { 'index': { method: 'GET', isArray: true }});
+});
