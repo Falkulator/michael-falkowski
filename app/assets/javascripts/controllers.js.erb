@@ -1,16 +1,17 @@
 
 angular.module("home", [], function($routeProvider) {
 	$routeProvider.when('/', 
-		{templateUrl: '/main', controller: homeCtrl});
+		{templateUrl: '<%= asset_path("home.html") %>', controller: homeCtrl});
 	$routeProvider.when('/about', 
-		{templateUrl: '/about', controller: aboutCtrl});
+		{templateUrl: '<%= asset_path("about.html") %>', controller: aboutCtrl});
 	$routeProvider.when('/post/:id', 
 		{templateUrl: '/post', controller: postCtrl});
+
 });
 
 
 function homeCtrl($scope, $http) {
-	$http({method: 'GET', url: '/post'}).
+	$http({method: 'GET', url: '/posts'}).
 		success(function(data, status, headers, config) {
 			$scope.posts = data;
 		}).
@@ -20,6 +21,7 @@ function homeCtrl($scope, $http) {
 		
 
 }
+
 
 function postCtrl ($scope, $http) {
 	

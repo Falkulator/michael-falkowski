@@ -1,4 +1,6 @@
 MikeFalkowski::Application.routes.draw do
+  devise_for :users, :skip => :registrations
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -48,7 +50,7 @@ MikeFalkowski::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  match 'post' => 'post#index'
+  resources :posts
   match 'about' => 'home#about'
   match 'main' => 'home#main'
   root :to => 'home#index'

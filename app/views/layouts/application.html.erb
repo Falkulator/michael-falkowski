@@ -9,23 +9,23 @@
   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.3/angular-resource.min.js"></script>
 </head>
 <body>
-	<div id="linearBg2"><%= image_tag "falko_logo.png" %></div>
+	<div id="linearBg2"><a href="#"><%= image_tag "falko_logo.png" %></a></div>
 	<div class="container-fluid">
 		<div class="row-fluid">
 			<div class="span2">
 				<ul class="nav nav-tabs nav-stacked">
-					<li><a href="#">Home</a></li>
 					<li><a href="#/about">About Me</a></li>
-					<li><a href="#/work">Work</a></li>
-					<li><a href="#">Blog</a></li>
+					<li><a href="#/work">My Work</a></li>
 				</ul>
+
 			</div>
+
 			<div class="span8" ng-view>
-				<%= yield %>
+
 			</div>
 		</div>
 	</div>
-	
+
 	<%= javascript_include_tag "controllers" %>
 </body>
 </html>

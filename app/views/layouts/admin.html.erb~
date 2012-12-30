@@ -1,0 +1,8 @@
+<head>
+<title>Poopy Admin</title>
+<%= javascript_include_tag :defaults %>
+<%= csrf_meta_tag %>
+</head>
+<body>
+	<%= yield %>
+</body>
