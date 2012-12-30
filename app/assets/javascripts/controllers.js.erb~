@@ -2,15 +2,31 @@
 angular.module("home", [], function($routeProvider) {
 	$routeProvider.when('/', 
 		{templateUrl: '/main', controller: homeCtrl});
+	$routeProvider.when('/about', 
+		{templateUrl: '/about', controller: aboutCtrl});
 });
 
 
 function homeCtrl($scope, $http) {
 	$http({method: 'GET', url: '/post'}).
 		success(function(data, status, headers, config) {
-			$scope.posts = status;
+			$scope.posts = data;
 		}).
 		error(function(data, status, headers, config) {
 			$scope.posts = status;
 		});
+		
+
+}
+
+function aboutCtrl($scope, $http) {
+//	$http({method: 'GET', url: '/about'}).
+//		success(function(data, status, headers, config) {
+//			$scope.data = data;
+//		}).
+//		error(function(data, status, headers, config) {
+//			$scope.posts = status;
+//		});
+//		
+
 }

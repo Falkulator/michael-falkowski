@@ -25,7 +25,8 @@
 			</div>
 		</div>
 	</div>
-	<%= javascript_include_tag "services" %>
+	
 	<%= javascript_include_tag "controllers" %>
+	<%= javascript_include_tag "services" %>
 </body>
 </html>

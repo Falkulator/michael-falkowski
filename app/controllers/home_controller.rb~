@@ -5,7 +5,8 @@ class HomeController < ApplicationController
 	end
 	
 	def main
-		render "home", layout => false
+		
+		render "home", :layout => false
 	end
 	
 end
