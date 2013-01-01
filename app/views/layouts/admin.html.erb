@@ -5,5 +5,21 @@
 	<%= csrf_meta_tag %>
 </head>
 <body>
-	<%= yield %>
+<div class="row span10">
+  <% if user_signed_in? %>
+		Signed in as <%= current_user.email %>. Not you?
+		<%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
+		<div class="row span10">
+			<%= link_to 'Site ',  root_path %>
+			<%= link_to 'Works ',  works_path %>
+			<%= link_to 'Posts ',  posts_path %>
+			<%= link_to 'Teches ',  teches_path %>
+		</div>
+		<p class="alert"><%= notice %></p>
+		<%= yield %>
+	<% else %>
+		<%= link_to "sign in", new_user_session_path %>
+		<h3>Did you want <%= link_to 'This? ',  root_path %>
+  <% end %>
+</div>
 </body>

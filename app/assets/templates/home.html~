@@ -1,10 +1,9 @@
-<ul class="unstyled">
+<ul class="nav nav-tabs nav-stacked">
 <li ng-repeat="post in posts">
-	
-	<h3 class="title">{{post.title}}</h3>
-	<div class="row">
-		<img src="{{post.image}}" height="150px" width="150px"/>
-		<p>{{post.body}}</p>
+	<div class="row-fluid span10 thumbnail">
+		<a href="#/posts/{{post.id}}"><h3 class="title">{{post.title}}</h3></a>
+		<img class="main" ng-src="{{post.image}}" height="150px" width="150px"/>
+		<p class="main">{{post.body}}</p>
 	</div>
 </li>
 

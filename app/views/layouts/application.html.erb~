@@ -7,6 +7,7 @@
   <%= csrf_meta_tags %>
   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.3/angular.min.js"></script>
   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.3/angular-resource.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
 	<div id="linearBg2"><a href="#"><%= image_tag "falko_logo.png" %></a></div>
@@ -20,13 +21,12 @@
 
 			</div>
 
-			<div class="span8" ng-view>
+			<div class="span10" ng-view>
 
 			</div>
 		</div>
 	</div>
 
-<%= yield %>
 	<%= javascript_include_tag "controllers" %>
 </body>
 </html>

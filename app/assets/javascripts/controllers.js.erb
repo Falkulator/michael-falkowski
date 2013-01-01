@@ -4,8 +4,10 @@ angular.module("home", [], function($routeProvider) {
 		{templateUrl: '<%= asset_path("home.html") %>', controller: homeCtrl});
 	$routeProvider.when('/about', 
 		{templateUrl: '<%= asset_path("about.html") %>', controller: aboutCtrl});
-	$routeProvider.when('/post/:id', 
-		{templateUrl: '/post', controller: postCtrl});
+	$routeProvider.when('/work', 
+		{templateUrl: '<%= asset_path("work.html") %>', controller: workCtrl});
+	$routeProvider.when('/posts/:id', 
+		{templateUrl: '<%= asset_path("post.html") %>', controller: postCtrl});
 
 });
 
@@ -23,11 +25,34 @@ function homeCtrl($scope, $http) {
 }
 
 
-function postCtrl ($scope, $http) {
-	
+function postCtrl ($scope, $http, $routeParams) {
+	curl = '/posts/' + $routeParams.id
+	$http({method: 'GET', url: curl}).
+		success(function(data, status, headers, config) {
+			$scope.post = data;
+		}).
+		error(function(data, status, headers, config) {
+			$scope.post = status;
+		});
 }
 
 function aboutCtrl($scope, $http) {
 
+	$http({method: 'GET', url: '/teches'}).
+		success(function(data, status, headers, config) {
+			$scope.teches = data;
+		}).
+		error(function(data, status, headers, config) {
+			$scope.teches = status;
+		});
+}
 
+function workCtrl($scope, $http) {
+	$http({method: 'GET', url: '/works'}).
+		success(function(data, status, headers, config) {
+			$scope.works = data;
+		}).
+		error(function(data, status, headers, config) {
+			$scope.works = status;
+		});	
 }

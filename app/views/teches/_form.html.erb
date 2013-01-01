@@ -1,0 +1,27 @@
+<%= form_for(@tech) do |f| %>
+  <% if @tech.errors.any? %>
+  <div id="errorExplanation">
+    <h2><%= pluralize(@tech.errors.count, "error") %> prohibited
+        this post from being saved:</h2>
+    <ul>
+    <% @tech.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :link %><br />
+    <%= f.text_field :link %>
+  </div>
+
+  <%= f.file_field :image %>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

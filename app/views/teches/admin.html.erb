@@ -1,0 +1,13 @@
+
+	<%= link_to 'New', new_tech_path %>
+	<% @teches.each do |t|%>
+	<div class="row span10">
+		<h4><%= t.title %></h4>
+		<p><%= t.image.url %></p>
+		<%= link_to 'Edit', edit_tech_path(t) %>
+		<%= link_to 'Destroy', t, :confirm => 'Are you sure?', :method => :delete %>
+	</div>
+	<% end %>
+
+
+

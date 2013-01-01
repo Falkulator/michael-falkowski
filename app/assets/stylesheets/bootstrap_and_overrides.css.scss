@@ -3,3 +3,23 @@
 ul.nav {
 	text-align: center;
 }
+
+@media (max-width: 480px) { 
+ div.hero-unit {
+	padding: 60px 10px;
+	}
+}
+
+img.main { 
+  max-width: 150px;
+  float: left;
+  margin: 5px;
+}
+
+p.main {
+	float: left;
+}
+
+#linearBg2 {
+	margin-bottom: 5px;
+}

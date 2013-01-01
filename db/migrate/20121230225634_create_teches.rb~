@@ -1,0 +1,10 @@
+class CreateTeches < ActiveRecord::Migration
+  def change
+    create_table :teches do |t|
+      t.title :string
+      t.link :string
+
+      t.timestamps
+    end
+  end
+end
