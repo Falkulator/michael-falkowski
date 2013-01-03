@@ -23,7 +23,7 @@ function homeCtrl($scope, $http) {
 		
 
 }
-
+homeCtrl.$inject = ['$scope', '$http'];
 
 function postCtrl ($scope, $http, $routeParams) {
 	curl = '/posts/' + $routeParams.id
@@ -35,6 +35,7 @@ function postCtrl ($scope, $http, $routeParams) {
 			$scope.post = status;
 		});
 }
+postCtrl.$inject = ['$scope', '$http', '$routeParams'];
 
 function aboutCtrl($scope, $http) {
 
@@ -46,6 +47,7 @@ function aboutCtrl($scope, $http) {
 			$scope.teches = status;
 		});
 }
+aboutCtrl.$inject = ['$scope', '$http'];
 
 function workCtrl($scope, $http) {
 	$http({method: 'GET', url: '/works'}).
@@ -56,3 +58,4 @@ function workCtrl($scope, $http) {
 			$scope.works = status;
 		});	
 }
+workCtrl.$inject = ['$scope', '$http'];

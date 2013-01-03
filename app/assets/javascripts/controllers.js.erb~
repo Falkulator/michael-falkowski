@@ -6,7 +6,7 @@ angular.module("home", [], function($routeProvider) {
 		{templateUrl: '<%= asset_path("about.html") %>', controller: aboutCtrl});
 	$routeProvider.when('/work', 
 		{templateUrl: '<%= asset_path("work.html") %>', controller: workCtrl});
-	$routeProvider.when('/post/:id', 
+	$routeProvider.when('/posts/:id', 
 		{templateUrl: '<%= asset_path("post.html") %>', controller: postCtrl});
 
 });
@@ -23,7 +23,7 @@ function homeCtrl($scope, $http) {
 		
 
 }
-
+homeCtrl.$inject = ['$scope', '$http'];
 
 function postCtrl ($scope, $http, $routeParams) {
 	curl = '/posts/' + $routeParams.id
@@ -35,6 +35,7 @@ function postCtrl ($scope, $http, $routeParams) {
 			$scope.post = status;
 		});
 }
+postCtrl.$inject = ['$scope', '$http', '$routeParams'];
 
 function aboutCtrl($scope, $http) {
 
@@ -46,6 +47,7 @@ function aboutCtrl($scope, $http) {
 			$scope.teches = status;
 		});
 }
+aboutCtrl.$inject = ['$scope', '$http'];
 
 function workCtrl($scope, $http) {
 	$http({method: 'GET', url: '/works'}).
