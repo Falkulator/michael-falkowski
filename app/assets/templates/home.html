@@ -2,8 +2,10 @@
 <li ng-repeat="post in posts">
 	<div class="row-fluid span10 thumbnail">
 		<a href="#/posts/{{post.id}}"><h3 class="title">{{post.title}}</h3></a>
-		<img class="main" ng-src="{{post.image}}" height="150px" width="150px"/>
-		<p class="main">{{post.body}}</p>
+		<img class="main" ng-src="{{post.image}}"/>
+		<p class="main">
+			<div ng-bind-html-unsafe="post.body|truncate:265"></div>
+		</p>
 	</div>
 </li>
 

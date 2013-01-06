@@ -1,16 +1,15 @@
 <div class="row">
 <div class="hero-unit">
 	<h2>Michael Falkowski</h2>
-	<p>Is a professional web developer living in Chicago Illinois. Check out some of my <a href="#/work">work</a>. I also have experience with the languages and  technologies listed below. I am available for freelance work.</p>
+	<p>Is a professional web developer living in Chicago Illinois. Check out some of my <a href="#/work">projects</a>. I also have experience with the technologies and services listed below. I am available for freelance work.</p>
 	<a href="http://github.com/falkulator" class="btn btn-primary btn-large">My Github Profile »</a>
 	<a href="mailto:falkulator@gmail.com" class="btn btn-primary btn-large">Contact Me »</a>
 </div>
 </div>
 <div class="row">
 	<div class="span12">
-		<h3>Languages And Technologies</h3>
 		<ul class="thumbnails">
-			<li class="span2" ng-repeat="tech in teches">
+			<li class="" ng-repeat="tech in teches">
 				<a href="{{tech.link}}"><img ng-src="{{tech.image}}" title="{{tech.title}}"/></a>
 			</li>
 		</ul>

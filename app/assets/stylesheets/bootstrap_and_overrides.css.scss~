@@ -3,9 +3,10 @@
 ul.nav {
 	text-align: center;
 }
+
+@media (max-width: 480px) { 
  div.hero-unit {
-.visible-phone{
-	padding: 60px 5px;
+	padding: 60px 10px;
 	}
 }
 
@@ -21,4 +22,8 @@ p.main {
 
 #linearBg2 {
 	margin-bottom: 5px;
+}
+
+.cent {
+	text-align: center;
 }

@@ -1,5 +1,5 @@
 
-angular.module("home", [], function($routeProvider) {
+angular.module("myApp", ['filters'], function($routeProvider) {
 	$routeProvider.when('/', 
 		{templateUrl: '<%= asset_path("home.html") %>', controller: homeCtrl});
 	$routeProvider.when('/about', 
@@ -42,6 +42,7 @@ function aboutCtrl($scope, $http) {
 	$http({method: 'GET', url: '/teches'}).
 		success(function(data, status, headers, config) {
 			$scope.teches = data;
+			
 		}).
 		error(function(data, status, headers, config) {
 			$scope.teches = status;
