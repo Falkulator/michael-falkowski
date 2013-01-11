@@ -1,0 +1,13 @@
+<head>
+	<title>sPlinko</title>
+	<%= javascript_include_tag "processing" %>
+	
+</head>
+<body>
+	<p>Left click above the pegs. Catch as many as you can.</p>
+	<canvas data-processing-sources="/processing/plink.pde" id="canvas"></canvas>
+
+	<script>
+		document.getElementById('canvas').ondragstart = function() { return false; };
+	</script>
+</body>

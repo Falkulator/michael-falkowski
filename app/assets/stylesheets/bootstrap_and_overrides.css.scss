@@ -10,15 +10,7 @@ ul.nav {
 	}
 }
 
-img.main { 
-  max-width: 150px;
-  float: left;
-  margin: 5px;
-}
 
-p.main {
-	float: left;
-}
 
 #linearBg2 {
 	margin-bottom: 5px;
@@ -30,4 +22,23 @@ p.main {
 
 .cent {
 	text-align: center;
+}
+
+.span10 {
+	margin-bottom: 8px;
+}
+
+li.span2 {
+	text-align: center;
+}
+
+/* Hacks to fix thumbnail stacking issue, prolly doesn't work in IE < 9 */
+ul.thumbnails li.span3:nth-child(4n + 5) {
+  clear: left;
+  margin-left: 0px;
+}
+
+ul.thumbnails li.span2:nth-child(8n + 8) {
+  clear: left;
+  margin-left: 0px;
 }

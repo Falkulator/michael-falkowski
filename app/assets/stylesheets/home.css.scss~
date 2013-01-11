@@ -21,6 +21,6 @@ img.main {
 	float: left;
 }
 
-li.post:nth-child(2n) div.thumbnail{
+div.post:nth-child(2n) {
 	background: #F0F3FC;
 }

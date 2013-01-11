@@ -1,3 +1,5 @@
 <h1>{{post.title}}</h1>
-<img ng-src="{{post.image}}"/>
-<p>{{post.body}}</p>
+<img ng-src="{{post.image_large_url}}"/>
+<p>
+	<div ng-bind-html-unsafe=post.body></div>
+</p>

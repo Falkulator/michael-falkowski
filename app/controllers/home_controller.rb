@@ -4,12 +4,12 @@ class HomeController < ApplicationController
 		render "index"
 	end
 	
-	def main	
-		render "home", :layout => false
+	def splinko
+		render "splinko", :layout => false
 	end
 	
-	def about
-		render "about", :layout => false
+	def pnoise
+		render "pnoise", :layout => false
 	end
 
 end

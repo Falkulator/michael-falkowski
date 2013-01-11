@@ -51,10 +51,13 @@ MikeFalkowski::Application.routes.draw do
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
   resources :posts, :teches, :works
-  match 'about' => 'home#about'
-  match 'main' => 'home#main'
   root :to => 'home#index'
 
+	# Stand alone works
+	match 'splinko' => 'home#splinko'
+	match 'pnoise' => 'home#pnoise'
+	
+	
   # See how all your routes lay out with "rake routes"
 
   # This is a legacy wild controller route that's not recommended for RESTful applications.

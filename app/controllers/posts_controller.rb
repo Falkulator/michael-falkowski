@@ -7,7 +7,7 @@ class PostsController < ApplicationController
 		@posts = Post.all
 		respond_to do |format|
     		format.html  { render "admin", :layout => 'admin'}
-    		format.json  { render :json => @posts }
+    		format.json  { render :json => @posts.reverse }
   		end
 	end
 	

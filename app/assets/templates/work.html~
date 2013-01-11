@@ -1,13 +1,17 @@
 <ul class="thumbnails">
 	<li class="span3" ng-repeat="work in works">
 		<div class="thumbnail">
-			<a href="{{work.link}}">
-				<img ng-src="{{work.image}}" alt="{{work.title}}" title="{{work.title}}"/>
-			</a>
+			<div class="cent">
+				<a href="{{work.link}}">
+					<img ng-src="{{work.image}}" alt="{{work.title}}" title="{{work.title}}"/>
+				</a>
+			</div>
 			<a href="{{work.link}}">
 				<h3>{{work.title}}</h3>
 			</a>
-			<p>{{work.body}}</p>
+			<p>
+				<div ng-bind-html-unsafe="work.body"></div>
+			</p>
 		</div>
 	</li>
 </ul>
