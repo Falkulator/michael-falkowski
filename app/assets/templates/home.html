@@ -3,7 +3,7 @@
 	<div class="row-fluid span10 thumbnail">
 		<a href="#/posts/{{post.id}}"><h3 class="title">{{post.title}}</h3></a>
 		<img class="main" ng-src="{{post.image_thumb_url}}"/>
-			<div class="main span8" ng-bind-html-unsafe="post.body|truncate:265"></div>
+			<div class="main span8" ng-bind-html-unsafe='post.body|truncate:400'></div>
 	</div>
 </li>
 
