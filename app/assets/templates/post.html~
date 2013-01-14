@@ -1,3 +1,0 @@
-<h1>{{post.title}}</h1>
-<img ng-src="{{post.image_large_url}}"/>
-<p>{{post.body}}</p>

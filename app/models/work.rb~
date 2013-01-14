@@ -1,3 +1,0 @@
-class Work < ActiveRecord::Base
-  attr_accessible :body, :image, :link, :title
-end

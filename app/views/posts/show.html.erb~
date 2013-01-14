@@ -1,8 +1,0 @@
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
-
-	<h4><%= @post.title %></h4>
-	<p><%= @post.body %></p>
-	<p><%= @post.image %></p>
-	</br>
-
